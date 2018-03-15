@@ -2,3 +2,4 @@
 
 ### Read Later
 * https://go-tour-jp.appspot.com/basics/7
+* https://go-tour-jp.appspot.com/basics/9

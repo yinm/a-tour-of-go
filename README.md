@@ -5,3 +5,4 @@
 * https://go-tour-jp.appspot.com/basics/9
 * https://go-tour-jp.appspot.com/basics/12
 * https://go-tour-jp.appspot.com/basics/13
+* https://go-tour-jp.appspot.com/flowcontrol/2

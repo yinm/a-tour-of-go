@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 const (
-	Big   = 1 << 100
+	Big = 1 << 100
 	Small = Big >> 99
 )
 
 func needInt(x int) int {
-	return x*10 + 1
+	return x * 10 + 1
 }
 
 func needFloat(x float64) float64 {
@@ -20,4 +20,3 @@ func main() {
 	fmt.Println(needFloat(Small))
 	fmt.Println(needFloat(Big))
 }
-

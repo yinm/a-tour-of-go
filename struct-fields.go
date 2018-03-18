@@ -12,4 +12,3 @@ func main() {
 	v.X = 4
 	fmt.Println(v.X)
 }
-

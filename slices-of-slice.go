@@ -6,12 +6,14 @@ import (
 )
 
 func main() {
+	// Crate a tic-tac-toe board.
 	board := [][]string{
 		[]string{"_", "_", "_"},
 		[]string{"_", "_", "_"},
 		[]string{"_", "_", "_"},
 	}
 
+	// The players take turns.
 	board[0][0] = "X"
 	board[2][2] = "O"
 	board[1][2] = "X"
@@ -22,4 +24,3 @@ func main() {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
 }
-

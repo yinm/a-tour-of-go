@@ -8,4 +8,3 @@ func main() {
 	var s []int = primes[1:4]
 	fmt.Println(s)
 }
-

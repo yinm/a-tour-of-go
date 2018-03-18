@@ -13,4 +13,3 @@ func main() {
 	p.X = 1e9
 	fmt.Println(v)
 }
-

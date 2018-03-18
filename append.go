@@ -10,7 +10,7 @@ func main() {
 	s = append(s, 0)
 	printSlice(s)
 
-	// The slice grows as needed
+	// The slice grows as needed.
 	s = append(s, 1)
 	printSlice(s)
 
@@ -22,4 +22,3 @@ func main() {
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
-

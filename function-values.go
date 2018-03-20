@@ -18,4 +18,3 @@ func main() {
 	fmt.Println(compute(hypot))
 	fmt.Println(compute(math.Pow))
 }
-

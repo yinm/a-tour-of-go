@@ -1,10 +1,11 @@
+// 2nd
 package main
 
 import "fmt"
 
 type Vertex struct {
-	x int
-	y int
+	X int
+	Y int
 }
 
 func main() {

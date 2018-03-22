@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import (
@@ -14,11 +15,9 @@ func main() {
 	f := MyFloat(-math.Sqrt2)
 	v := Vertex{3, 4}
 
-	a = f // a MyFloat implements Abser
-	a = &v // a *Vertex implements Abser
+	a = f
+	a = &v
 
-	// In the following line, v is a Vertex(not *Vertex)
-	// and does NOT implement Abser.
 	a = v
 
 	fmt.Println(a.Abs())
@@ -37,6 +36,10 @@ type Vertex struct {
 	X, Y float64
 }
 
-func (v *Vertex) Abs() float64 {
+//func (v *Vertex) Abs() float64 {
+//	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+//}
+
+func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }

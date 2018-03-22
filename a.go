@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import "fmt"
@@ -15,6 +16,10 @@ func (t T) M() {
 }
 
 func main() {
-	var i I = T{"hello"}
+	var i I
+	i = T{"hello"}
 	i.M()
+
+	t := T{"foobar"}
+	t.M()
 }

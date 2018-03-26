@@ -1,18 +1,16 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-func say(s string) {
-	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
-		fmt.Println(s)
-	}
-}
+import "fmt"
 
 func main() {
-	go say("world")
-	say("hello")
+	i, j := 42, 2701
+
+	p := &i
+	fmt.Println(*p)
+	*p = 21
+	fmt.Println(i)
+
+	p = &j
+	*p = *p / 37
+	fmt.Println(j)
 }

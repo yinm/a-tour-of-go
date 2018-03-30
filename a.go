@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import (
@@ -17,4 +18,7 @@ func (f MyFloat) Abs() float64 {
 func main() {
 	f := MyFloat(-math.Sqrt2)
 	fmt.Println(f.Abs())
+
+	pf := MyFloat(-math.Sqrt2)
+	fmt.Println(pf.Abs())
 }

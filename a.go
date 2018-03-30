@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import (
@@ -18,8 +19,18 @@ func (v *Vertex) Scale(f float64) {
 	v.Y = v.Y * f
 }
 
+func (v Vertex) ScaleNotPointer(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+	fmt.Println(v.X)
+	fmt.Println(v.Y)
+}
+
 func main() {
 	v := Vertex{3, 4}
 	v.Scale(10)
+	fmt.Println(v.Abs())
+
+	v.ScaleNotPointer(10)
 	fmt.Println(v.Abs())
 }

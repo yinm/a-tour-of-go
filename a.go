@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import (
@@ -25,6 +26,7 @@ func (f F) M() {
 
 func main() {
 	var i I
+
 	i = &T{"Hello"}
 	describe(i)
 	i.M()

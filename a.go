@@ -1,9 +1,12 @@
+// 2nd
 package main
 
 import "fmt"
 
+type I interface {}
+
 func main() {
-	var i interface{}
+	var i I
 	describe(i)
 
 	i = 42
@@ -13,6 +16,6 @@ func main() {
 	describe(i)
 }
 
-func describe(i interface{}) {
+func describe(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

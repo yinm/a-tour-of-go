@@ -1,21 +1,19 @@
-// 2nd
 package main
 
 import "fmt"
 
-type I interface {}
-
 func main() {
-	var i I
-	describe(i)
+	var i interface{} = "hello"
 
-	i = 42
-	describe(i)
+	s := i.(string)
+	fmt.Println(s)
 
-	i = "hello"
-	describe(i)
-}
+	s, ok := i.(string)
+	fmt.Println(s, ok)
 
-func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
+	f, ok := i.(float64)
+	fmt.Println(f, ok)
+
+	f = i.(float64)
+	fmt.Println(f)
 }

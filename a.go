@@ -1,21 +1,20 @@
+// 2nd
 package main
 
 import "fmt"
 
 type IPAddr [4]byte
 
-func (ip IPAddr) String() string {
-	return fmt.Sprintf("%v.%v.%v.%v", ip[0], ip[1], ip[2], ip[3])
+func (ipAddr IPAddr) String() string {
+	return fmt.Sprintf("%d.%d.%d.%d", ipAddr[0], ipAddr[1], ipAddr[2], ipAddr[3])
 }
 
 func main() {
-	hosts := map[string]IPAddr {
-		"loopback": {127, 0, 0, 1},
-		"googleDNS": {8, 8, 8, 8},
+	hosts := map[string]IPAddr{
+		"loopback": { 127, 0, 0, 1 },
+		"googleDNS": { 8, 8, 8, 8 },
 	}
 	for name, ip := range hosts {
 		fmt.Printf("%v: %v\n", name, ip)
 	}
 }
-
-

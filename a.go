@@ -1,3 +1,4 @@
+// 2nd
 package main
 
 import (
@@ -22,7 +23,8 @@ func run() error {
 }
 
 func main() {
-	if err := run(); err != nil {
+	err := run()
+	if err != nil {
 		fmt.Println(err)
 	}
 }

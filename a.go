@@ -1,31 +1,21 @@
-// 2nd
 package main
 
 import (
 	"fmt"
-	"math"
+	"io"
+	"strings"
 )
 
-type ErrNegativeSqrt float64
-
-func (e ErrNegativeSqrt) Error() string {
-	return fmt.Sprintf("cannot Sqrt negative number: %f", e)
-}
-
-func Sqrt(x float64) (float64, error) {
-	if x < 0 {
-		return 0, ErrNegativeSqrt(x)
-	}
-
-	z := 1.0
-	for diff := 1.0; math.Abs(diff) > 1e-10; {
-		diff = ((z * z) - x) / (2 * z)
-		z = z - diff
-	}
-	return z, nil
-}
-
 func main() {
-	fmt.Println(Sqrt(2))
-	fmt.Println(Sqrt(-2))
+	r := strings.NewReader("Hello, Reader!")
+
+	b := make([]byte, 8)
+	for {
+		n, err := r.Read(b)
+		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
+		fmt.Printf("b[:n] = %q\n", b[:n])
+		if err == io.EOF {
+			break
+		}
+	}
 }
